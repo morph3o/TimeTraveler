@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		368819781C8A3E5B00665DA3 /* Journey.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 368819771C8A3E5B00665DA3 /* Journey.storyboard */; };
+		3688197D1C8A3F3400665DA3 /* opening_compressed.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3688197C1C8A3F3400665DA3 /* opening_compressed.mp4 */; };
 		941DE6F01C8A292400F4A4A4 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 941DE6EE1C8A292400F4A4A4 /* Interface.storyboard */; };
 		941DE6F21C8A292400F4A4A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 941DE6F11C8A292400F4A4A4 /* Assets.xcassets */; };
 		941DE6F91C8A292400F4A4A4 /* TimeTraveler Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 941DE6F81C8A292400F4A4A4 /* TimeTraveler Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -86,6 +87,7 @@
 
 /* Begin PBXFileReference section */
 		368819771C8A3E5B00665DA3 /* Journey.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Journey.storyboard; sourceTree = "<group>"; };
+		3688197C1C8A3F3400665DA3 /* opening_compressed.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = opening_compressed.mp4; sourceTree = "<group>"; };
 		941DE6EC1C8A292400F4A4A4 /* TimeTraveler Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TimeTraveler Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		941DE6EF1C8A292400F4A4A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		941DE6F11C8A292400F4A4A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -147,6 +149,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		368819791C8A3E7F00665DA3 /* video */ = {
+			isa = PBXGroup;
+			children = (
+				3688197C1C8A3F3400665DA3 /* opening_compressed.mp4 */,
+			);
+			name = video;
+			sourceTree = "<group>";
+		};
 		941DE6ED1C8A292400F4A4A4 /* TimeTraveler Watch */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +254,7 @@
 		94B939F71C7F294200F36C2D /* TimeTraveler */ = {
 			isa = PBXGroup;
 			children = (
+				368819791C8A3E7F00665DA3 /* video */,
 				941DE72F1C8A3D4B00F4A4A4 /* model */,
 				941DE7271C8A343D00F4A4A4 /* constant */,
 				941DE71E1C8A328200F4A4A4 /* controller */,
@@ -419,6 +430,7 @@
 			files = (
 				94B93A031C7F294200F36C2D /* LaunchScreen.storyboard in Resources */,
 				368819781C8A3E5B00665DA3 /* Journey.storyboard in Resources */,
+				3688197D1C8A3F3400665DA3 /* opening_compressed.mp4 in Resources */,
 				94B93A001C7F294200F36C2D /* Assets.xcassets in Resources */,
 				94B939FE1C7F294200F36C2D /* Main.storyboard in Resources */,
 			);
