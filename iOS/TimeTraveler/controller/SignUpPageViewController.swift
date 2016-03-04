@@ -19,11 +19,11 @@ class SignUpPageViewController: UIPageViewController, StandardPageViewController
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //let keptVc: UIViewController = instantiateViewControllerWithIdentifier("enter_flight_controller")
+        let keptVc: UIViewController = instantiateViewControllerWithIdentifier("enter_flight_controller")
         let mainVc: UIViewController = instantiateViewControllerWithIdentifier("enter_traveler_kind_controller")
         let tidiedOutVc: UIViewController = instantiateViewControllerWithIdentifier("enter_transport_controller")
         
-        controllers = [ mainVc, tidiedOutVc]
+        controllers = [keptVc, mainVc, tidiedOutVc]
 //        let view: UIView = UIView.viewFromNibNamed("BackgroundBlurView", owner: self)
 //        self.view.insertSubview(view, atIndex: 0)
         dataSource = self
