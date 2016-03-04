@@ -1,15 +1,14 @@
 {
   "name": "timetraveler-server",
-  "version": "0.0.1",
-  "description": "",
-  "main": "main.js",
+  "version": "1.0.0",
+  "description": "Time Traveler Backend",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Lukas Schmidt",
+  "author": "",
   "license": "MIT",
   "dependencies": {
-    "apn": "^1.7.5",
     "express": "^4.13.4"
   }
 }
