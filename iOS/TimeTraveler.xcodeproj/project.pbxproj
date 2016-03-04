@@ -19,8 +19,10 @@
 		941DE70E1C8A292400F4A4A4 /* TimeTraveler Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 941DE6EC1C8A292400F4A4A4 /* TimeTraveler Watch.app */; };
 		941DE7181C8A299300F4A4A4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941DE7171C8A299300F4A4A4 /* Alamofire.framework */; };
 		941DE71A1C8A29A900F4A4A4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941DE7191C8A29A900F4A4A4 /* Alamofire.framework */; };
+		941DE7201C8A32F000F4A4A4 /* EnterFlightInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941DE71F1C8A32F000F4A4A4 /* EnterFlightInfoViewController.swift */; };
+		941DE7231C8A330500F4A4A4 /* StandardPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941DE7211C8A330500F4A4A4 /* StandardPageViewController.swift */; };
+		941DE7241C8A330500F4A4A4 /* ViewController+Instatiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941DE7221C8A330500F4A4A4 /* ViewController+Instatiation.swift */; };
 		94B939F91C7F294200F36C2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B939F81C7F294200F36C2D /* AppDelegate.swift */; };
-		94B939FB1C7F294200F36C2D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B939FA1C7F294200F36C2D /* ViewController.swift */; };
 		94B939FE1C7F294200F36C2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94B939FC1C7F294200F36C2D /* Main.storyboard */; };
 		94B93A001C7F294200F36C2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94B939FF1C7F294200F36C2D /* Assets.xcassets */; };
 		94B93A031C7F294200F36C2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94B93A011C7F294200F36C2D /* LaunchScreen.storyboard */; };
@@ -92,9 +94,11 @@
 		941DE70B1C8A292400F4A4A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		941DE7171C8A299300F4A4A4 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		941DE7191C8A29A900F4A4A4 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/watchOS/Alamofire.framework; sourceTree = "<group>"; };
+		941DE71F1C8A32F000F4A4A4 /* EnterFlightInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterFlightInfoViewController.swift; sourceTree = "<group>"; };
+		941DE7211C8A330500F4A4A4 /* StandardPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardPageViewController.swift; sourceTree = "<group>"; };
+		941DE7221C8A330500F4A4A4 /* ViewController+Instatiation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+Instatiation.swift"; sourceTree = "<group>"; };
 		94B939F51C7F294200F36C2D /* TimeTraveler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTraveler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94B939F81C7F294200F36C2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		94B939FA1C7F294200F36C2D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		94B939FD1C7F294200F36C2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		94B939FF1C7F294200F36C2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94B93A021C7F294200F36C2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -164,6 +168,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		941DE71E1C8A328200F4A4A4 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				941DE7211C8A330500F4A4A4 /* StandardPageViewController.swift */,
+				941DE7221C8A330500F4A4A4 /* ViewController+Instatiation.swift */,
+				941DE71F1C8A32F000F4A4A4 /* EnterFlightInfoViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
 		94B939EC1C7F294200F36C2D = {
 			isa = PBXGroup;
 			children = (
@@ -191,8 +205,8 @@
 		94B939F71C7F294200F36C2D /* TimeTraveler */ = {
 			isa = PBXGroup;
 			children = (
+				941DE71E1C8A328200F4A4A4 /* controller */,
 				94B939F81C7F294200F36C2D /* AppDelegate.swift */,
-				94B939FA1C7F294200F36C2D /* ViewController.swift */,
 				94B939FC1C7F294200F36C2D /* Main.storyboard */,
 				94B939FF1C7F294200F36C2D /* Assets.xcassets */,
 				94B93A011C7F294200F36C2D /* LaunchScreen.storyboard */,
@@ -424,8 +438,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94B939FB1C7F294200F36C2D /* ViewController.swift in Sources */,
 				94B939F91C7F294200F36C2D /* AppDelegate.swift in Sources */,
+				941DE7231C8A330500F4A4A4 /* StandardPageViewController.swift in Sources */,
+				941DE7201C8A32F000F4A4A4 /* EnterFlightInfoViewController.swift in Sources */,
+				941DE7241C8A330500F4A4A4 /* ViewController+Instatiation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
