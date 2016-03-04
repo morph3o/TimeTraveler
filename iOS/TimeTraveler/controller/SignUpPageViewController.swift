@@ -23,6 +23,7 @@ class SignUpPageViewController: UIPageViewController, StandardPageViewController
         let mainVc: UIViewController = instantiateViewControllerWithIdentifier("enter_traveler_kind_controller")
         let tidiedOutVc: UIViewController = instantiateViewControllerWithIdentifier("enter_transport_controller")
 
+                
         
         controllers = [keptVc, mainVc, tidiedOutVc]
 //        let view: UIView = UIView.viewFromNibNamed("BackgroundBlurView", owner: self)

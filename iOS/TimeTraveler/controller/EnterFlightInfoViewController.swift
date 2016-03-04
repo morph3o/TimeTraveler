@@ -11,8 +11,7 @@ import UIKit
 class EnterFlightInfoViewController: UIViewController {
     @IBOutlet weak var boockingReferenceIDInput: UITextField!
     @IBOutlet weak var flightIDInput: UITextField!
-    
-    
+        
     @IBAction func didChangeBoockingRederence(sender: UITextField) {
         
     }
