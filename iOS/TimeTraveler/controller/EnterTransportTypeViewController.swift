@@ -7,7 +7,23 @@
 //
 
 import UIKit
+import MapKit
 
 class EnterTransportTypeViewController: UIViewController {
-
+    var transportType: TransportType?
+    @IBOutlet weak var carETALabel: UILabel!
+    @IBOutlet weak var TrainETALabel: UILabel!
+    
+    func calculateETACar() {
+        let request = MKDirectionsRequest()
+        request.source = MKMapItem.mapItemForCurrentLocation()
+        request.destination = nil
+        request.transportType = .Automobile
+        request.requestsAlternateRoutes = false
+        let direction = MKDirections(request: request)
+        direction.calculateETAWithCompletionHandler { response, error in
+            guard let response = response else { return }
+            let time = response.expectedArrivalDate
+        }
+    }
 }
