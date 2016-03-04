@@ -5,12 +5,13 @@
 //  Created by Lukas Schmidt on 04.03.16.
 //  Copyright © 2016 Lukas Schmidt. All rights reserved.
 //
-
+import AVFoundation
 import UIKit
 
 class SignUpPageViewController: UIPageViewController, StandardPageViewController, UIGestureRecognizerDelegate {
     var controllers:Array<UIViewController> = []
     var currentControllerIndex = 0
+    var player: AVPlayer?
     
     var displayedController: UIViewController {
         return viewControllers![0]
@@ -32,6 +33,49 @@ class SignUpPageViewController: UIPageViewController, StandardPageViewController
         self.setViewControllers([controllers[0]], direction: UIPageViewControllerNavigationDirection.Forward, animated: false, completion: nil)
         navigationController?.interactivePopGestureRecognizer?.delegate = self
         stylePageControl()
+        
+        // load video
+        playBackgroundvideo()
+        
+    }
+    
+    func playBackgroundvideo() {
+        
+        let backgroundView = UIView(frame: view.frame)
+        backgroundView.backgroundColor = .blackColor()
+        backgroundView.alpha = 0.8
+        view.insertSubview(backgroundView, atIndex: 0)
+
+        
+        
+        let videoFile = NSBundle.mainBundle().pathForResource("opening_compressed", ofType: "mp4")
+        player = AVPlayer(URL: NSURL(fileURLWithPath: videoFile!))
+        let playerLayer = AVPlayerLayer(player: player)
+        playerLayer.frame = self.view.frame
+        playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+        self.view.layer.insertSublayer(playerLayer, atIndex: 0)        
+        player!.seekToTime(kCMTimeZero)
+        player!.play()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "playerItemDidReachEnd", name: AVPlayerItemDidPlayToEndTimeNotification, object: player!.currentItem)
+        
+        
+        let verticalMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.y", type: .TiltAlongVerticalAxis)
+        verticalMotionEffect.minimumRelativeValue = -10
+        verticalMotionEffect.maximumRelativeValue = 10
+        
+        let horizontalMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.x", type: .TiltAlongHorizontalAxis)
+        horizontalMotionEffect.minimumRelativeValue = -10
+        horizontalMotionEffect.maximumRelativeValue = 10
+        
+        let group = UIMotionEffectGroup()
+        group.motionEffects = [horizontalMotionEffect, verticalMotionEffect]
+        self.view.addMotionEffect(group)
+    }
+    
+    func playerItemDidReachEnd() {
+        player!.seekToTime(kCMTimeZero)
+        player!.play()
     }
     
     func stylePageControl() {

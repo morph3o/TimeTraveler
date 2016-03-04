@@ -15,7 +15,7 @@
 		368819891C8A3FC200665DA3 /* Montserrat-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 368819831C8A3FC200665DA3 /* Montserrat-Regular.otf */; };
 		3688198A1C8A3FC200665DA3 /* Montserrat-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 368819841C8A3FC200665DA3 /* Montserrat-SemiBold.otf */; };
 		3688198B1C8A3FC200665DA3 /* Montserrat-UltraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 368819851C8A3FC200665DA3 /* Montserrat-UltraLight.otf */; };
-		3688198D1C8A47F200665DA3 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3688198C1C8A47F200665DA3 /* UIFont+Extensions.swift */; };
+		3688198D1C8A47F200665DA3 /* UIFont+CustomFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3688198C1C8A47F200665DA3 /* UIFont+CustomFonts.swift */; };
 		941DE6F01C8A292400F4A4A4 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 941DE6EE1C8A292400F4A4A4 /* Interface.storyboard */; };
 		941DE6F21C8A292400F4A4A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 941DE6F11C8A292400F4A4A4 /* Assets.xcassets */; };
 		941DE6F91C8A292400F4A4A4 /* TimeTraveler Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 941DE6F81C8A292400F4A4A4 /* TimeTraveler Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -101,7 +101,7 @@
 		368819831C8A3FC200665DA3 /* Montserrat-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.otf"; sourceTree = "<group>"; };
 		368819841C8A3FC200665DA3 /* Montserrat-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.otf"; sourceTree = "<group>"; };
 		368819851C8A3FC200665DA3 /* Montserrat-UltraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-UltraLight.otf"; sourceTree = "<group>"; };
-		3688198C1C8A47F200665DA3 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
+		3688198C1C8A47F200665DA3 /* UIFont+CustomFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+CustomFonts.swift"; sourceTree = "<group>"; };
 		941DE6EC1C8A292400F4A4A4 /* TimeTraveler Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TimeTraveler Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		941DE6EF1C8A292400F4A4A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		941DE6F11C8A292400F4A4A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -242,7 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				941DE7281C8A346100F4A4A4 /* UIColor+StandardColors.swift */,
-				3688198C1C8A47F200665DA3 /* UIFont+Extensions.swift */,
+				3688198C1C8A47F200665DA3 /* UIFont+CustomFonts.swift */,
 			);
 			path = constant;
 			sourceTree = "<group>";
@@ -544,7 +544,7 @@
 				941DE7201C8A32F000F4A4A4 /* EnterFlightInfoViewController.swift in Sources */,
 				941DE72E1C8A361900F4A4A4 /* EnterTransportTypeViewController.swift in Sources */,
 				941DE7241C8A330500F4A4A4 /* ViewController+Instatiation.swift in Sources */,
-				3688198D1C8A47F200665DA3 /* UIFont+Extensions.swift in Sources */,
+				3688198D1C8A47F200665DA3 /* UIFont+CustomFonts.swift in Sources */,
 				941DE7261C8A335300F4A4A4 /* SignUpPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
