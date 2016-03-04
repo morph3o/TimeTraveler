@@ -13,6 +13,10 @@ enum LaguageType {
     case BigBag(Int)
 }
 
+enum TravelSpeed {
+    case Slow, Medium, Fast
+}
+
 enum TransportType {
     case PlublicTransport
     case Car
@@ -23,7 +27,7 @@ struct FlightReference {
     var isValid = false
 }
 
-class FlightInformation {
+class TravelerInformation {
     //User Input
     var flightReference: FlightReference?
     var laguageType: LaguageType?

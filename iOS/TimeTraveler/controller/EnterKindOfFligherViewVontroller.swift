@@ -8,6 +8,12 @@
 
 import UIKit
 
-class EnterKindOfFligherViewVontroller: UIViewController {
-
+class EnterKindOfFligherViewVontroller: EnteringViewController {
+    var laguageType: LaguageType?
+    var travelSpeed: TravelSpeed?
+    
+    func isValidInput() -> Bool {
+        guard let _ = laguageType, let _ = travelSpeed else { return false }
+        return true
+    }
 }

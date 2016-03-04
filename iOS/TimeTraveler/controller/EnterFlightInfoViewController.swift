@@ -29,7 +29,8 @@ class EnterFlightInfoViewController: EnteringViewController {
     }
     
     func didChangeFlightStatus(flightStatus: FlightStatus) {
-        
+        travelerInformation.flightStatus = flightStatus
+        //Activate Next button
     }
 
     @IBAction func didChangeFlightID(sender: UITextField) {

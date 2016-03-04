@@ -40,6 +40,10 @@ class SignUpPageViewController: UIPageViewController, StandardPageViewController
         
         self.view.layer.backgroundColor = UIColor.clearColor().CGColor
     }
+    
+    func passToNextInputViewController(travelerInformation: TravelerInformation) {
+        
+    }
 }
 
 extension SignUpPageViewController {

@@ -9,11 +9,10 @@
 import UIKit
 
 class EnteringViewController: UIViewController {
-    var flightInformation: FlightInformation!
+    var travelerInformation: TravelerInformation!
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let destinationController = segue.destinationViewController as? EnteringViewController {
-            destinationController.flightInformation = flightInformation
-        }
+    func passToNextViewController() {
+        let parentController = self.parentViewController as? SignUpPageViewController
+        parentController?.passToNextInputViewController(travelerInformation)
     }
 }
