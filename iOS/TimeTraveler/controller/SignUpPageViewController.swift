@@ -56,6 +56,6 @@ extension SignUpPageViewController {
     }
     
     func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
-        return 1
+        return 0
     }
 }
