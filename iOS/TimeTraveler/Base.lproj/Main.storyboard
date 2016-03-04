@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Flt-oO-C67">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Flt-oO-C67">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Montserrat-Bold.otf">
+            <string>Montserrat-Bold</string>
+        </mutableArray>
+        <mutableArray key="Montserrat-Light.otf">
+            <string>Montserrat-Light</string>
+            <string>Montserrat-Light</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Sign Up Page View Controller-->
         <scene sceneID="aPZ-DE-P5C">
@@ -29,40 +38,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5be-f1-ePs">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="z.B. #24882" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kag-Ev-zrq">
-                                        <rect key="frame" x="170.5" y="160" width="260" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="260" id="pCp-je-X2x"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="didChangeBoockingRederence:" destination="378-xc-Sa8" eventType="editingChanged" id="g3k-F5-1EE"/>
-                                        </connections>
-                                    </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buchungsnummer-/code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBS-Pk-Nqj">
-                                        <rect key="frame" x="170.5" y="131.5" width="191" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="z.B LF510" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="19R-aS-RIX">
-                                        <rect key="frame" x="170" y="226.5" width="260" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="260" id="kQ3-eU-UcS"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="didChangeFlightID:" destination="378-xc-Sa8" eventType="editingChanged" id="2Ju-z1-NkQ"/>
-                                        </connections>
-                                    </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flugnummer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JL3-5f-ghl">
-                                        <rect key="frame" x="170" y="198" width="96.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vj-4p-zQv">
                                         <rect key="frame" x="278" y="520" width="45" height="30"/>
                                         <state key="normal" title="Weiter">
@@ -72,11 +47,45 @@
                                             <action selector="finishEnertingData:" destination="378-xc-Sa8" eventType="touchUpInside" id="P3j-kz-srN"/>
                                         </connections>
                                     </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="z.B. #24882" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kag-Ev-zrq">
+                                        <rect key="frame" x="170" y="311" width="260" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="260" id="pCp-je-X2x"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="didChangeBoockingRederence:" destination="378-xc-Sa8" eventType="editingChanged" id="g3k-F5-1EE"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Buchungsnummer-/code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBS-Pk-Nqj">
+                                        <rect key="frame" x="170" y="282" width="254" height="21"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="z.B LF510" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="19R-aS-RIX">
+                                        <rect key="frame" x="170" y="377" width="260" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="260" id="kQ3-eU-UcS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="didChangeFlightID:" destination="378-xc-Sa8" eventType="editingChanged" id="2Ju-z1-NkQ"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Flugnummer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JL3-5f-ghl">
+                                        <rect key="frame" x="170" y="348" width="97" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="Kag-Ev-zrq" firstAttribute="centerX" secondItem="5be-f1-ePs" secondAttribute="centerX" id="5H1-Tr-71P"/>
-                                    <constraint firstItem="Kag-Ev-zrq" firstAttribute="top" secondItem="5be-f1-ePs" secondAttribute="top" constant="160" id="6Rd-TD-WLG"/>
+                                    <constraint firstItem="Kag-Ev-zrq" firstAttribute="top" secondItem="5be-f1-ePs" secondAttribute="top" constant="310.5" id="6Rd-TD-WLG"/>
                                     <constraint firstItem="3vj-4p-zQv" firstAttribute="centerX" secondItem="5be-f1-ePs" secondAttribute="centerX" id="Cb1-Z2-j0a"/>
                                     <constraint firstItem="JL3-5f-ghl" firstAttribute="leading" secondItem="Kag-Ev-zrq" secondAttribute="leading" id="DQS-l4-EHv"/>
                                     <constraint firstItem="Kag-Ev-zrq" firstAttribute="top" secondItem="tBS-Pk-Nqj" secondAttribute="bottom" constant="8" id="FjZ-51-wBV"/>
@@ -87,12 +96,37 @@
                                     <constraint firstItem="19R-aS-RIX" firstAttribute="top" secondItem="JL3-5f-ghl" secondAttribute="bottom" constant="8" id="scY-qe-eQV"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dCf-55-DqX">
+                                <rect key="frame" x="180" y="70" width="240" height="74"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="paB-f7-7D4">
+                                        <rect key="frame" x="20" y="14" width="78" height="45"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Traveller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R0D-8R-uwF">
+                                        <rect key="frame" x="96" y="19" width="125" height="36"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="4u9-fE-p8w"/>
+                                    <constraint firstAttribute="height" constant="74" id="TK0-v7-Fev"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="dCf-55-DqX" firstAttribute="centerX" secondItem="5be-f1-ePs" secondAttribute="centerX" id="1aG-WM-Tnh"/>
                             <constraint firstItem="5be-f1-ePs" firstAttribute="leading" secondItem="8xj-4W-3ag" secondAttribute="leadingMargin" constant="-20" id="GKl-Z8-e7G"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5be-f1-ePs" secondAttribute="trailing" constant="-20" id="Mvg-UD-YOv"/>
                             <constraint firstItem="5be-f1-ePs" firstAttribute="top" secondItem="HH7-K8-bPr" secondAttribute="bottom" constant="-20" id="TWa-GD-Re3"/>
+                            <constraint firstItem="dCf-55-DqX" firstAttribute="top" secondItem="HH7-K8-bPr" secondAttribute="bottom" constant="50" id="YMd-Nv-8uF"/>
+                            <constraint firstItem="7BF-7s-f5A" firstAttribute="top" secondItem="dCf-55-DqX" secondAttribute="bottom" constant="456" id="gkv-Bs-adE"/>
                             <constraint firstItem="7BF-7s-f5A" firstAttribute="top" secondItem="5be-f1-ePs" secondAttribute="bottom" id="vTK-Xm-cfo"/>
                         </constraints>
                     </view>

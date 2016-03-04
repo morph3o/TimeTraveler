@@ -17,6 +17,7 @@ class EnterFlightInfoViewController: EnteringViewController {
     let flightStatusService = FlightStatusService()
     
     
+
     @IBAction func didChangeBoockingRederence(sender: UITextField) {
         guard let boockingReferenceID = sender.text else { return }
         flightReference = FlightReference(boockingReferenceID: boockingReferenceID, isValid: false)
