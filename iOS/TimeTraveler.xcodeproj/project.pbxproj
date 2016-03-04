@@ -22,6 +22,10 @@
 		941DE7201C8A32F000F4A4A4 /* EnterFlightInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941DE71F1C8A32F000F4A4A4 /* EnterFlightInfoViewController.swift */; };
 		941DE7231C8A330500F4A4A4 /* StandardPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941DE7211C8A330500F4A4A4 /* StandardPageViewController.swift */; };
 		941DE7241C8A330500F4A4A4 /* ViewController+Instatiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941DE7221C8A330500F4A4A4 /* ViewController+Instatiation.swift */; };
+		941DE7261C8A335300F4A4A4 /* SignUpPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941DE7251C8A335300F4A4A4 /* SignUpPageViewController.swift */; };
+		941DE7291C8A346100F4A4A4 /* UIColor+StandardColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941DE7281C8A346100F4A4A4 /* UIColor+StandardColors.swift */; };
+		941DE72C1C8A35D700F4A4A4 /* EnterKindOfFligherViewVontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941DE72B1C8A35D700F4A4A4 /* EnterKindOfFligherViewVontroller.swift */; };
+		941DE72E1C8A361900F4A4A4 /* EnterTransportTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941DE72D1C8A361900F4A4A4 /* EnterTransportTypeViewController.swift */; };
 		94B939F91C7F294200F36C2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B939F81C7F294200F36C2D /* AppDelegate.swift */; };
 		94B939FE1C7F294200F36C2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94B939FC1C7F294200F36C2D /* Main.storyboard */; };
 		94B93A001C7F294200F36C2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94B939FF1C7F294200F36C2D /* Assets.xcassets */; };
@@ -97,6 +101,10 @@
 		941DE71F1C8A32F000F4A4A4 /* EnterFlightInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterFlightInfoViewController.swift; sourceTree = "<group>"; };
 		941DE7211C8A330500F4A4A4 /* StandardPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardPageViewController.swift; sourceTree = "<group>"; };
 		941DE7221C8A330500F4A4A4 /* ViewController+Instatiation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+Instatiation.swift"; sourceTree = "<group>"; };
+		941DE7251C8A335300F4A4A4 /* SignUpPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpPageViewController.swift; sourceTree = "<group>"; };
+		941DE7281C8A346100F4A4A4 /* UIColor+StandardColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+StandardColors.swift"; sourceTree = "<group>"; };
+		941DE72B1C8A35D700F4A4A4 /* EnterKindOfFligherViewVontroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterKindOfFligherViewVontroller.swift; sourceTree = "<group>"; };
+		941DE72D1C8A361900F4A4A4 /* EnterTransportTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterTransportTypeViewController.swift; sourceTree = "<group>"; };
 		94B939F51C7F294200F36C2D /* TimeTraveler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTraveler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94B939F81C7F294200F36C2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94B939FD1C7F294200F36C2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -171,11 +179,30 @@
 		941DE71E1C8A328200F4A4A4 /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				941DE7211C8A330500F4A4A4 /* StandardPageViewController.swift */,
-				941DE7221C8A330500F4A4A4 /* ViewController+Instatiation.swift */,
+				941DE72A1C8A356500F4A4A4 /* helpers */,
 				941DE71F1C8A32F000F4A4A4 /* EnterFlightInfoViewController.swift */,
+				941DE7251C8A335300F4A4A4 /* SignUpPageViewController.swift */,
+				941DE72B1C8A35D700F4A4A4 /* EnterKindOfFligherViewVontroller.swift */,
+				941DE72D1C8A361900F4A4A4 /* EnterTransportTypeViewController.swift */,
 			);
 			path = controller;
+			sourceTree = "<group>";
+		};
+		941DE7271C8A343D00F4A4A4 /* constant */ = {
+			isa = PBXGroup;
+			children = (
+				941DE7281C8A346100F4A4A4 /* UIColor+StandardColors.swift */,
+			);
+			path = constant;
+			sourceTree = "<group>";
+		};
+		941DE72A1C8A356500F4A4A4 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				941DE7211C8A330500F4A4A4 /* StandardPageViewController.swift */,
+				941DE7221C8A330500F4A4A4 /* ViewController+Instatiation.swift */,
+			);
+			name = helpers;
 			sourceTree = "<group>";
 		};
 		94B939EC1C7F294200F36C2D = {
@@ -205,6 +232,7 @@
 		94B939F71C7F294200F36C2D /* TimeTraveler */ = {
 			isa = PBXGroup;
 			children = (
+				941DE7271C8A343D00F4A4A4 /* constant */,
 				941DE71E1C8A328200F4A4A4 /* controller */,
 				94B939F81C7F294200F36C2D /* AppDelegate.swift */,
 				94B939FC1C7F294200F36C2D /* Main.storyboard */,
@@ -439,9 +467,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				94B939F91C7F294200F36C2D /* AppDelegate.swift in Sources */,
+				941DE72C1C8A35D700F4A4A4 /* EnterKindOfFligherViewVontroller.swift in Sources */,
 				941DE7231C8A330500F4A4A4 /* StandardPageViewController.swift in Sources */,
+				941DE7291C8A346100F4A4A4 /* UIColor+StandardColors.swift in Sources */,
 				941DE7201C8A32F000F4A4A4 /* EnterFlightInfoViewController.swift in Sources */,
+				941DE72E1C8A361900F4A4A4 /* EnterTransportTypeViewController.swift in Sources */,
 				941DE7241C8A330500F4A4A4 /* ViewController+Instatiation.swift in Sources */,
+				941DE7261C8A335300F4A4A4 /* SignUpPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

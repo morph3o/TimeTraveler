@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="378-xc-Sa8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Flt-oO-C67">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Page View Controller-->
+        <!--Sign Up Page View Controller-->
         <scene sceneID="aPZ-DE-P5C">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="Flt-oO-C67" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Flt-oO-C67" customClass="SignUpPageViewController" customModule="TimeTraveler" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p3r-8j-udn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1562" y="1306"/>
@@ -84,10 +84,10 @@
             </objects>
             <point key="canvasLocation" x="-1926" y="1975"/>
         </scene>
-        <!--View Controller-->
+        <!--Enter Kind Of Fligher View Vontroller-->
         <scene sceneID="3F7-ga-XIe">
             <objects>
-                <viewController id="jzZ-Dh-A5a" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="enter_traveler_kind_controller" id="jzZ-Dh-A5a" customClass="EnterKindOfFligherViewVontroller" customModule="TimeTraveler" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bYb-qh-d2Z"/>
                         <viewControllerLayoutGuide type="bottom" id="kYn-VG-m3R"/>
@@ -101,6 +101,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="naT-U6-QBT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1223" y="1975"/>
+        </scene>
+        <!--Enter Transport Type View Controller-->
+        <scene sceneID="dvd-cL-VYu">
+            <objects>
+                <viewController storyboardIdentifier="enter_transport_controller" id="87F-QV-rt9" customClass="EnterTransportTypeViewController" customModule="TimeTraveler" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8fG-cm-SIa"/>
+                        <viewControllerLayoutGuide type="bottom" id="JW1-HE-wzc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e6i-Jx-uyv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xcb-wU-YpK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-569" y="1975"/>
         </scene>
     </scenes>
 </document>
