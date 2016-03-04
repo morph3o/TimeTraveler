@@ -7,6 +7,12 @@
 var express    = require('express');        // call express
 var app        = express();                 // define our app using express
 var bodyParser = require('body-parser');
+var apicalls   = require('./apicalls.js');
+apicalls.initApis(function () {
+  apicalls.performLufthansaRequest('mockup/profiles/customers', { filter: 'id', callerid: 'team1' }, function(response) {
+    console.log(response);
+  });
+});
 
 // configure app to use bodyParser()
 // this will let us get the data from a POST
