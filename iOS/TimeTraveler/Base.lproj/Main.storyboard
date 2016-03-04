@@ -17,7 +17,7 @@
         <!--Enter Flight Info View Controller-->
         <scene sceneID="F3m-Pt-Ypy">
             <objects>
-                <viewController id="378-xc-Sa8" customClass="EnterFlightInfoViewController" customModule="TimeTraveler" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="enter_flight_controller" id="378-xc-Sa8" customClass="EnterFlightInfoViewController" customModule="TimeTraveler" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HH7-K8-bPr"/>
                         <viewControllerLayoutGuide type="bottom" id="7BF-7s-f5A"/>
