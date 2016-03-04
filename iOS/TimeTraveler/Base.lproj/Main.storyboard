@@ -14,10 +14,10 @@
             </objects>
             <point key="canvasLocation" x="-1562" y="1306"/>
         </scene>
-        <!--View Controller-->
+        <!--Enter Flight Info View Controller-->
         <scene sceneID="F3m-Pt-Ypy">
             <objects>
-                <viewController id="378-xc-Sa8" sceneMemberID="viewController">
+                <viewController id="378-xc-Sa8" customClass="EnterFlightInfoViewController" customModule="TimeTraveler" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HH7-K8-bPr"/>
                         <viewControllerLayoutGuide type="bottom" id="7BF-7s-f5A"/>
@@ -29,13 +29,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5be-f1-ePs">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kag-Ev-zrq">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="z.B. #24882" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kag-Ev-zrq">
                                         <rect key="frame" x="170.5" y="160" width="260" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="260" id="pCp-je-X2x"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="didChangeBoockingRederence:" destination="378-xc-Sa8" eventType="editingChanged" id="g3k-F5-1EE"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buchungsnummer-/code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBS-Pk-Nqj">
                                         <rect key="frame" x="170.5" y="131.5" width="191" height="20.5"/>
@@ -43,13 +46,16 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="19R-aS-RIX">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="z.B LF510" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="19R-aS-RIX">
                                         <rect key="frame" x="170" y="226.5" width="260" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="260" id="kQ3-eU-UcS"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="didChangeFlightID:" destination="378-xc-Sa8" eventType="editingChanged" id="2Ju-z1-NkQ"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flugnummer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JL3-5f-ghl">
                                         <rect key="frame" x="170" y="198" width="96.5" height="20.5"/>
@@ -57,14 +63,25 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vj-4p-zQv">
+                                        <rect key="frame" x="278" y="520" width="45" height="30"/>
+                                        <state key="normal" title="Weiter">
+                                            <color key="titleColor" red="0.87843137250000003" green="0.38431372549999998" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="finishEnertingData:" destination="378-xc-Sa8" eventType="touchUpInside" id="P3j-kz-srN"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="Kag-Ev-zrq" firstAttribute="centerX" secondItem="5be-f1-ePs" secondAttribute="centerX" id="5H1-Tr-71P"/>
                                     <constraint firstItem="Kag-Ev-zrq" firstAttribute="top" secondItem="5be-f1-ePs" secondAttribute="top" constant="160" id="6Rd-TD-WLG"/>
+                                    <constraint firstItem="3vj-4p-zQv" firstAttribute="centerX" secondItem="5be-f1-ePs" secondAttribute="centerX" id="Cb1-Z2-j0a"/>
                                     <constraint firstItem="JL3-5f-ghl" firstAttribute="leading" secondItem="Kag-Ev-zrq" secondAttribute="leading" id="DQS-l4-EHv"/>
                                     <constraint firstItem="Kag-Ev-zrq" firstAttribute="top" secondItem="tBS-Pk-Nqj" secondAttribute="bottom" constant="8" id="FjZ-51-wBV"/>
                                     <constraint firstItem="JL3-5f-ghl" firstAttribute="top" secondItem="Kag-Ev-zrq" secondAttribute="bottom" constant="8" id="SAJ-SR-VLB"/>
+                                    <constraint firstAttribute="bottom" secondItem="3vj-4p-zQv" secondAttribute="bottom" constant="50" id="XLZ-Pe-QPf"/>
                                     <constraint firstItem="JL3-5f-ghl" firstAttribute="leading" secondItem="19R-aS-RIX" secondAttribute="leading" id="iNJ-jU-eIX"/>
                                     <constraint firstItem="tBS-Pk-Nqj" firstAttribute="leading" secondItem="Kag-Ev-zrq" secondAttribute="leading" id="nHI-OU-Cd7"/>
                                     <constraint firstItem="19R-aS-RIX" firstAttribute="top" secondItem="JL3-5f-ghl" secondAttribute="bottom" constant="8" id="scY-qe-eQV"/>
@@ -79,6 +96,10 @@
                             <constraint firstItem="7BF-7s-f5A" firstAttribute="top" secondItem="5be-f1-ePs" secondAttribute="bottom" id="vTK-Xm-cfo"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="boockingReferenceIDInput" destination="Kag-Ev-zrq" id="o27-NJ-hgK"/>
+                        <outlet property="flightIDInput" destination="19R-aS-RIX" id="TNK-5m-WLU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k5D-Cg-BpL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

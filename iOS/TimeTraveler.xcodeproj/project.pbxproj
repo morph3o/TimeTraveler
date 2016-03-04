@@ -430,8 +430,8 @@
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = "/usr/local/bin/carthage copy-frameworks";
-			shellScript = "";
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 		941DE71D1C8A2ADE00F4A4A4 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -444,8 +444,8 @@
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = "/usr/local/bin/carthage copy-frameworks";
-			shellScript = "";
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -758,6 +758,7 @@
 				941DE7121C8A292400F4A4A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		941DE7151C8A292400F4A4A4 /* Build configuration list for PBXNativeTarget "TimeTraveler Watch" */ = {
 			isa = XCConfigurationList;
@@ -766,6 +767,7 @@
 				941DE7101C8A292400F4A4A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		94B939F01C7F294200F36C2D /* Build configuration list for PBXProject "TimeTraveler" */ = {
 			isa = XCConfigurationList;
