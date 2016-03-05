@@ -23,11 +23,18 @@ var rmv_api = {
   key: '1d43371a-7636-4ea5-9993-712688474011'
 }
 
+var db_api = {
+  url: 'https://open-api.bahn.de/bin/rest.exe',
+  key: 'DBhackFrankfurt0316'
+}
+
 function initApis(callback) {
   initLufthansaAPI(function () {
     initFraportAPI(function () {
       initRmvAPI(function() {
-        callback();
+        initDbAPI(function(){
+          callback();
+        });
       });
     });
   });
@@ -173,7 +180,39 @@ var performRmvRequest = function(endpoint, data, callback) {
   });
 }
 
+// DB Stuff ###################################################################
+var initDbAPI = function(callback) {
+  console.log('DB Api-Key: ' + db_api.key);
+  callback();
+}
+/**
+* @param {string} endpoint the route in the api (ex. /location.name)
+* @param {string} (optional) data the filter data for the query
+* @param {string} callback callback(err, response)
+*/
+var performDbRequest = function(endpoint, data, callback) {
+  var url = db_api.url + endpoint + '?authKey=' + db_api.key + '&lang=de&format=json';
+  if (data){
+    url += '&' + querystring.stringify(data);
+  }
+  console.log(url);
+  request.get({
+    url:  url 
+  }, function(err, httpResponse, body){
+    if(httpResponse.statusCode !== 200){
+      return console.log('6: Invalid Status Code Returned:', httpResponse.statusCode);
+    }
+    if (err) {
+      console.log(err);
+    }
+    if (callback) {
+      callback(JSON.parse(body));
+    }
+  });
+}
+
 exports.initApis = initApis;
 exports.performLufthansaRequest = performLufthansaRequest;
 exports.performFraportRequest = performFraportRequest;
 exports.performRmvRequest = performRmvRequest;
+exports.performDbRequest = performDbRequest;
