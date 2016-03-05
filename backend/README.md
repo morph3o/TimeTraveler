@@ -97,3 +97,14 @@ It will response all the possible trips from HOLM to FRA.
 `http://localhost:8080/trainStation?station=Frankfurt`
 
 [example file](json-objects/examples/db_stations.json)
+
+## Train Departure Schedule from Station
+
+### URL
+`GET /departureSchedule?station_id=008096021&date=2016-03-06&time=07:02`
+
+### cURL
+
+`curl -XGET 'http://localhost:8080/departureSchedule?station_id=008096021&date=2016-03-06&time=07:02'`
+
+[example file](json-objects/examples/departure_schedule.json)

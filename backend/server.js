@@ -115,6 +115,18 @@ router.route('/trainStation')
         });
     });
 
+router.route('/departureSchedule')
+    .get(function(req, res) {
+        var stationId = req.query.station_id;
+        var date = req.query.date;
+        var time = req.query.time;
+        apicalls.initApis(function () {
+            apicalls.performDbRequest('/departureBoard', {id: stationId, date: date, time: time}, function(response) {
+              res.json(response);
+            });
+        });
+    });
+
 // more routes for our API will happen here
 
 // REGISTER OUR ROUTES -------------------------------
