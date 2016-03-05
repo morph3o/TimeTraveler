@@ -105,6 +105,16 @@ router.route('/tripToAirport')
         });
     });
 
+router.route('/trainStation')
+    .get(function(req, res) {
+        var station = req.query.station;
+        apicalls.initApis(function () {
+            apicalls.performDbRequest('/location.name', {input: station}, function(response) {
+              res.json(response);
+            });
+        });
+    });
+
 // more routes for our API will happen here
 
 // REGISTER OUR ROUTES -------------------------------

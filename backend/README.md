@@ -87,3 +87,13 @@ It will response all the possible trips from HOLM to FRA.
 `curl -XGET 'http://localhost:8080/tripToAirport?originCoordLat=50.056446&originCoordLong=8.592368&airportCode=FRA'`
 
 [example file](json-objects/examples/trip_example.json)
+
+## Search DB Station
+
+### URL
+`GET /trainStation?station=:STATION_NAME`
+
+### cURL
+`http://localhost:8080/trainStation?station=Frankfurt`
+
+[example file](json-objects/examples/db_stations.json)
