@@ -197,6 +197,15 @@ var routeParkingAvailabilityForecast = function(data, callback){
   });
 };
 
+var routeFlightStatus = function(data, callback){
+  var airline = data.airline;
+  var flightnumber = data.flightnumber;
+  var departuredate = data.date;
+  apicalls.performLufthansaRequest('operations/flightstatus/'+airline+flightnumber+'/'+departuredate, null, function(response) {
+    callback(null, response.FlightStatusResource.Flights.Flight);
+  });
+};
+
 // ROUTES FOR OUR API
 // =============================================================================
 
@@ -308,6 +317,16 @@ router.route('/parkingAvailability')
 router.route('/parkingAvailabilityForecast')
 .get(function(req, res){
   routeParkingAvailabilityForecast({}, function(err, response) {
+    res.json(response);
+  });
+});
+
+router.route('/flightStatus')
+.get(function(req, res){
+  var airlineCode = req.query.airline_code;
+  var flightNumber = req.query.flight_number;
+  var departureDate = req.query.departure_date;
+  routeFlightStatus({airline: airlineCode, flightnumber: flightNumber, date: departureDate}, function(err, response) {
     res.json(response);
   });
 });
