@@ -8,11 +8,6 @@ var express    = require('express');        // call express
 var app        = express();                 // define our app using express
 var bodyParser = require('body-parser');
 var apicalls   = require('./apicalls.js');
-apicalls.initApis(function () {
-  apicalls.performLufthansaRequest('mockup/profiles/customers', { filter: 'id', callerid: 'team1' }, function(response) {
-    console.log(response);
-  });
-});
 
 // configure app to use bodyParser()
 // this will let us get the data from a POST
@@ -30,15 +25,85 @@ router.get('/', function(req, res) {
     res.json({ message: 'hooray! welcome to Time Traveler Seerver API!' });
 });
 
-router.route('/customer')
-    // create a bear (accessed at POST http://localhost:8080/api/bears)
-    .post(function(req, res) {
-        var booking_code = req.body.booking_code;
-        var last_name = req.body.last_name;
-        var customer = {booking_code: booking_code, last_name: last_name};
-        res.json(JSON.stringify(customer));
+router.route('/flightInfo/:booking_code')
+    .get(function(req, res){
+        var bookingCode = req.params.booking_code;
+        apicalls.initApis(function () {
+          apicalls.performLufthansaRequest('mockup/profiles/ordersandcustomers/pnrid/'+bookingCode, { callerid: 'team1' }, function(response) {
+              var flights = response.CustomersAndOrdersResponse.Orders.Order.OrderItems.OrderItem.FlightItem.OriginDestination.Flight;
+              res.json(flights);
+          });
+        });
     });
 
+router.route('/customer')
+    .get(function(req, res) {
+        var lastName = req.query.ln;
+        var firstName = req.query.fn;
+        apicalls.initApis(function () {
+            apicalls.performLufthansaRequest('mockup/profiles/customers/'+lastName+'/'+firstName, { filter: 'id', callerid: 'team1' }, function(response) {
+              res.json(response.CustomersResponse.Customers.Customer);
+            });
+        });
+    });
+
+router.route('/customer/:customer_id/address')
+    .get(function(req, res) {
+        var customerId = req.params.customer_id;
+        apicalls.initApis(function () {
+            apicalls.performLufthansaRequest('mockup/profiles/customers/'+customerId, { callerid: 'team1' }, function(response) {
+              res.json(response.CustomersResponse.Customers.Customer.Contacts.Contact.AddressContact);
+            });
+        });
+    });
+
+router.route('/airportInfo/:airport_code')
+    .get(function(req, res) {
+        var airportCode = req.params.airport_code;
+        apicalls.initApis(function () {
+            apicalls.performLufthansaRequest('references/airports/'+airportCode, { filter: 'id', callerid: 'team1' }, function(response) {
+              res.json(response.AirportResource.Airports.Airport);
+            });
+        });
+    });
+
+router.route('/locations')
+    .get(function(req, res) {
+        var location = req.query.location;
+        apicalls.initApis(function () {
+            apicalls.performRmvRequest('/location.name', {input: location}, function(response) {
+              res.json(response);
+            });
+        });
+    });
+
+router.route('/nearbystops')
+    .get(function(req, res) {
+        var originLat = req.query.originCoordLat;
+        var originLong = req.query.originCoordLong;
+        apicalls.initApis(function () {
+            apicalls.performRmvRequest('/location.nearbystops', {originCoordLong: originLong, originCoordLat: originLat}, function(response) {
+              res.json(response);
+            });
+        });
+    });
+
+router.route('/tripToAirport')
+    .get(function(req, res) {
+        var airportCode = req.query.airportCode;
+        var originLat = req.query.originCoordLat;
+        var originLong = req.query.originCoordLong;
+        apicalls.initApis(function () {
+            apicalls.performLufthansaRequest('references/airports/'+airportCode, { filter: 'id', callerid: 'team1' }, function(response) {
+              var coord = response.AirportResource.Airports.Airport.Position.Coordinate;
+              var airportLat = coord.Latitude;
+              var airportLong = coord.Longitude;
+              apicalls.performRmvRequest('/trip', {originCoordLong: originLong, originCoordLat: originLat, destCoordLat: airportLat, destCoordLong: airportLong}, function(response) {
+                res.json(response);
+              });
+            });
+        });
+    });
 
 // more routes for our API will happen here
 
