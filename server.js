@@ -181,7 +181,8 @@ var routeDistance = function(data, callback){
   // var start = 'Check-In A';
   // var end = 'Central Security-Check A';
   apicalls.performFraportRequest('transittimes','/transittime/'+start+'/'+end, null, function(response) {
-    callback(null, response[0].path);
+      var path = (response.length > 0) ? response[0].path : {};
+      callback(null, path);
   });
 };
 
