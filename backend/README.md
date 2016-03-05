@@ -1,5 +1,12 @@
 # Time Traveler Backend
 
+## Start Server
+Install node in your computer and the use the following fromt the `backend` folder.
+
+```Bash
+node server.js
+```
+
 ## Flight Info Service
 
 ### URL
