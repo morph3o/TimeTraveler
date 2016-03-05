@@ -18,10 +18,17 @@ var fraport_api = {
   token: '9ddaee45bbf8d1bc26082b4116a7b484'
 };
 
+var rmv_api = {
+  url: 'http://www.test.rmv.de/api',
+  key: '1d43371a-7636-4ea5-9993-712688474011'
+}
+
 function initApis(callback) {
   initLufthansaAPI(function () {
     initFraportAPI(function () {
-      callback();
+      initRmvAPI(function() {
+        callback();
+      });
     });
   });
 
@@ -131,6 +138,42 @@ var performFraportRequest = function(api, endpoint, data, callback) {
   });
 }
 
+// RMV Stuff ###################################################################
+var initRmvAPI = function(callback) {
+  console.log('RMV Api-Key: ' + rmv_api.key);
+  callback();
+}
+
+/**
+* @param {string} endpoint the route in the api (ex. /trip)
+* @param {string} (optional) data the filter data for the query
+* @param {string} callback callback(err, response)
+*/
+var performRmvRequest = function(endpoint, data, callback) {
+  var url = rmv_api.url + endpoint + '?accessId=' + rmv_api.key + '&format=json';
+  if (data){
+    url += '&' + querystring.stringify(data);
+  }
+  console.log(url);
+  request.get({
+    url:  url ,
+    headers: {
+      'Accept': 'application/json'
+    }
+  }, function(err, httpResponse, body){
+    if(httpResponse.statusCode !== 200){
+      return console.log('5: Invalid Status Code Returned:', httpResponse.statusCode);
+    }
+    if (err) {
+      console.log(err);
+    }
+    if (callback) {
+      callback(JSON.parse(body));
+    }
+  });
+}
+
 exports.initApis = initApis;
 exports.performLufthansaRequest = performLufthansaRequest;
 exports.performFraportRequest = performFraportRequest;
+exports.performRmvRequest = performRmvRequest;
